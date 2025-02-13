@@ -158,5 +158,110 @@ This table maps the GRU’s attack techniques to the **MITRE ATT&CK framework**,
 
 ---
 
-## **5. Conclusion**
+## **5. Adversary Simulation Using These Techniques**
+To perform an **adversary simulation** replicating the GRU's spear-phishing campaign, a **Red Team** can follow these steps using a combination of tools and methodologies. The goal is to **test detection and response capabilities** of an organization by emulating a **real-world phishing and post-exploitation scenario**.
+
+### **Step 1: Reconnaissance (T1598.003)**
+- **Objective:** Gather email addresses and organizational information.
+- **Tools:**
+  - **theHarvester**
+  - **Maltego**
+  - **Recon-ng**
+  - **SpiderFoot**
+  - **OSINT Framework**
+  - **LinkedInt**
+  - **FOCA**
+  - **Hunter.io**
+
+---
+
+### **Step 2: Weaponization (T1566.001)**
+- **Objective:** Create malicious phishing emails and attachments.
+- **Tools:**
+  - **GoPhish** (Phishing campaign management)
+  - **Modlishka** (Reverse proxy phishing)
+  - **Evilginx2** (Session hijacking via phishing)
+  - **SET (Social-Engineer Toolkit)**
+  - **ZPhisher** (Automated phishing framework)
+  - **PhishingKit**
+  - **Mailsniper** (Email attacks)
+
+---
+
+### **Step 3: Delivery (T1204.002)**
+- **Objective:** Send spear-phishing emails with trojanized attachments.
+- **Tools:**
+  - **SMTP Spoofing (SendEmail, Swaks)**
+  - **King Phisher**
+  - **Phishing Frenzy**
+  - **Cobalt Strike (Email Beaconing)**
+  - **Custom Python SMTP Scripts**
+  - **EmPyre** (Payload delivery via email)
+
+---
+
+### **Step 4: Exploitation (T1059.001, T1105)**
+- **Objective:** Exploit the victim’s system via **VBA macros & PowerShell**.
+- **Tools:**
+  - **Empire (PowerShell & Python Post-Exploitation)**
+  - **Merlin (C2 with PowerShell)**
+  - **Covenant (PowerShell C2 Framework)**
+  - **Pupy RAT** (Post-exploitation)
+  - **MacroPack** (Weaponizing macros)
+  - **Metasploit (MS Word VBA payloads)**
+
+---
+
+### **Step 5: Installation & Persistence (T1133, T1078)**
+- **Objective:** Establish **persistence** through credentials or implants.
+- **Tools:**
+  - **Mimikatz** (Credential Dumping)
+  - **Rubeus** (Kerberos attacks)
+  - **SharpShooter** (Bypassing detection with shellcode)
+  - **Evil-WinRM** (Remote PowerShell access)
+  - **PoshC2** (Post-exploitation framework)
+  - **Sliver C2**
+  - **Metasploit (Persistence modules)**
+
+---
+
+### **Step 6: Command & Control (T1071.001)**
+- **Objective:** Maintain communication with the compromised system.
+- **Tools:**
+  - **Cobalt Strike** (C2 framework)
+  - **Havoc C2** (Evasion-aware C2)
+  - **Mythic C2** (Adversary emulation)
+  - **Brute Ratel** (Advanced post-exploitation)
+  - **Sliver C2** (Lightweight C2 framework)
+  - **Merlin Agent** (Fileless C2)
+  - **DNSCat2** (C2 over DNS)
+
+---
+
+### **Step 7: Exfiltration & Credential Harvesting (T1110.001, T1566.002)**
+- **Objective:** Extract data and use stolen credentials.
+- **Tools:**
+  - **LaZagne** (Credential dumping)
+  - **SharpHound (BloodHound)** (Graph-based privilege escalation)
+  - **Seatbelt** (Post-exploitation recon)
+  - **PowerSploit** (Credential access modules)
+  - **CredSniper** (Stealing credentials via phishing)
+  - **BrowserGhost** (Dumping browser-stored credentials)
+  - **Raccoon Stealer** (Harvesting passwords and cookies)
+
+---
+
+### **Adversary Simulation Execution**
+A **Red Team** could **simulate the GRU campaign** by setting up:
+1. **Recon Phase** – Use OSINT tools to collect **email addresses** from a target organization.
+2. **Weaponization Phase** – Craft a **malicious Word document** with embedded PowerShell payloads.
+3. **Delivery Phase** – Send phishing emails using **GoPhish** or **SET**.
+4. **Exploitation Phase** – Execute a **PowerShell Empire payload** to establish **C2 access**.
+5. **Persistence Phase** – Deploy **Mimikatz** or **Sliver C2** for **long-term access**.
+6. **Command & Control** – Use **Cobalt Strike** or **Havoc C2** for **remote access**.
+7. **Post-Exploitation & Exfiltration** – Extract credentials using **SharpHound** and **LaZagne**.
+
+---
+
+## **6. Conclusion**
 This document reconstructs the **GRU’s spear-phishing campaign against U.S. elections**, providing a **real-world simulation** of the attack. Understanding these **TTPs** helps **Red Teams and Blue Teams** develop stronger defenses.
