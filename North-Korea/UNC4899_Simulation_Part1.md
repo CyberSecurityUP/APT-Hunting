@@ -127,24 +127,11 @@ For **Red Team exercises**, the following tools can replicate the attack chain:
 
 ---
 
-## **🎯 Where to Insert the Images?**
-The images you uploaded can be used in the following sections:
-
-1. **JumpCloud Supply Chain Attack Diagram (1st Image)**
-   - 📍 **Insert in the "Execution & Exploitation" section**  
-   - **Explanation:** Shows how an attacker **compromised JumpCloud** to inject malicious payloads.
-
-2. **North Korean VPN & C2 Infrastructure (2nd Image)**
-   - 📍 **Insert in the "C2 and Exfiltration" section**  
-   - **Explanation:** Illustrates the **use of VPNs, ORBs, and proxy chains** to evade attribution.
-
----
-
 ## **🔥 Adversary Simulation: Execution Steps**
 To simulate this attack in a **Red Team exercise**, follow these steps:
 
 1️⃣ **Setup a phishing campaign** using **Evilginx2 + Gophish** to steal credentials.  
-2️⃣ **Deploy a fake JumpCloud update** using **Metasploit or Empire** to inject a payload.  
+2️⃣ **Deploy a fake JumpCloud update** using **C2 Implants** to inject a payload.  
 3️⃣ **Execute an obfuscated payload** (`UNC4899-backdoor.exe`) via **Cobalt Strike Beacon**.  
 4️⃣ **Maintain persistence** by modifying **Windows Registry & macOS LaunchAgents**.  
 5️⃣ **Exfiltrate data** via **reverse SSH tunnel (Chisel VPN) or SOCKS5 proxy**.  
